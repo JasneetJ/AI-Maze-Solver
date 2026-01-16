@@ -1,0 +1,65 @@
+{
+    "MoveToGoal": {
+        "checkpoints": [
+            {
+                "steps": 1238014,
+                "file_path": "results\\MazeSolver\\MoveToGoal\\MoveToGoal-1238014.onnx",
+                "reward": null,
+                "creation_time": 1764603537.9136517,
+                "auxillary_file_paths": [
+                    "results\\MazeSolver\\MoveToGoal\\MoveToGoal-1238014.pt"
+                ]
+            },
+            {
+                "steps": 1238398,
+                "file_path": "results\\MazeSolver\\MoveToGoal\\MoveToGoal-1238398.onnx",
+                "reward": null,
+                "creation_time": 1764621848.7726657,
+                "auxillary_file_paths": [
+                    "results\\MazeSolver\\MoveToGoal\\MoveToGoal-1238398.pt"
+                ]
+            },
+            {
+                "steps": 1238974,
+                "file_path": "results\\MazeSolver\\MoveToGoal\\MoveToGoal-1238974.onnx",
+                "reward": null,
+                "creation_time": 1764622258.7963898,
+                "auxillary_file_paths": [
+                    "results\\MazeSolver\\MoveToGoal\\MoveToGoal-1238974.pt"
+                ]
+            },
+            {
+                "steps": 1243998,
+                "file_path": "results\\MazeSolver\\MoveToGoal\\MoveToGoal-1243998.onnx",
+                "reward": -30.209998406469822,
+                "creation_time": 1764622582.378741,
+                "auxillary_file_paths": [
+                    "results\\MazeSolver\\MoveToGoal\\MoveToGoal-1243998.pt"
+                ]
+            },
+            {
+                "steps": 1245534,
+                "file_path": "results\\MazeSolver\\MoveToGoal\\MoveToGoal-1245534.onnx",
+                "reward": null,
+                "creation_time": 1764624218.7146215,
+                "auxillary_file_paths": [
+                    "results\\MazeSolver\\MoveToGoal\\MoveToGoal-1245534.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 1245534,
+            "file_path": "results\\MazeSolver\\MoveToGoal.onnx",
+            "reward": null,
+            "creation_time": 1764624218.7146215,
+            "auxillary_file_paths": [
+                "results\\MazeSolver\\MoveToGoal\\MoveToGoal-1245534.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.8.0+cpu"
+    }
+}
