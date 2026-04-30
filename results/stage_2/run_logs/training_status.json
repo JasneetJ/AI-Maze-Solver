@@ -1,0 +1,110 @@
+{
+    "MazeAgent": {
+        "checkpoints": [
+            {
+                "steps": 199973,
+                "file_path": "results\\stage_2\\MazeAgent\\MazeAgent-199973.onnx",
+                "reward": -3.801285879952567,
+                "creation_time": 1776455298.832444,
+                "auxillary_file_paths": [
+                    "results\\stage_2\\MazeAgent\\MazeAgent-199973.pt"
+                ]
+            },
+            {
+                "steps": 212043,
+                "file_path": "results\\stage_2\\MazeAgent\\MazeAgent-212043.onnx",
+                "reward": 3.8030832211176553,
+                "creation_time": 1776455424.691826,
+                "auxillary_file_paths": [
+                    "results\\stage_2\\MazeAgent\\MazeAgent-212043.pt"
+                ]
+            },
+            {
+                "steps": 299854,
+                "file_path": "results\\stage_2\\MazeAgent\\MazeAgent-299854.onnx",
+                "reward": 5.443500126109404,
+                "creation_time": 1776456069.7362916,
+                "auxillary_file_paths": [
+                    "results\\stage_2\\MazeAgent\\MazeAgent-299854.pt"
+                ]
+            },
+            {
+                "steps": 399891,
+                "file_path": "results\\stage_2\\MazeAgent\\MazeAgent-399891.onnx",
+                "reward": 6.964903316190166,
+                "creation_time": 1776456625.2649493,
+                "auxillary_file_paths": [
+                    "results\\stage_2\\MazeAgent\\MazeAgent-399891.pt"
+                ]
+            },
+            {
+                "steps": 417704,
+                "file_path": "results\\stage_2\\MazeAgent\\MazeAgent-417704.onnx",
+                "reward": null,
+                "creation_time": 1776456908.6866703,
+                "auxillary_file_paths": [
+                    "results\\stage_2\\MazeAgent\\MazeAgent-417704.pt"
+                ]
+            },
+            {
+                "steps": 499836,
+                "file_path": "results\\stage_2\\MazeAgent\\MazeAgent-499836.onnx",
+                "reward": 6.68018219687722,
+                "creation_time": 1776457617.4833367,
+                "auxillary_file_paths": [
+                    "results\\stage_2\\MazeAgent\\MazeAgent-499836.pt"
+                ]
+            },
+            {
+                "steps": 599822,
+                "file_path": "results\\stage_2\\MazeAgent\\MazeAgent-599822.onnx",
+                "reward": 3.0619004130363465,
+                "creation_time": 1776458108.5848613,
+                "auxillary_file_paths": [
+                    "results\\stage_2\\MazeAgent\\MazeAgent-599822.pt"
+                ]
+            },
+            {
+                "steps": 691410,
+                "file_path": "results\\stage_2\\MazeAgent\\MazeAgent-691410.onnx",
+                "reward": null,
+                "creation_time": 1776458661.5578718,
+                "auxillary_file_paths": [
+                    "results\\stage_2\\MazeAgent\\MazeAgent-691410.pt"
+                ]
+            },
+            {
+                "steps": 871273,
+                "file_path": "results\\stage_2\\MazeAgent\\MazeAgent-871273.onnx",
+                "reward": 7.015260115846411,
+                "creation_time": 1776799871.175309,
+                "auxillary_file_paths": [
+                    "results\\stage_2\\MazeAgent\\MazeAgent-871273.pt"
+                ]
+            },
+            {
+                "steps": 886193,
+                "file_path": "results\\stage_2\\MazeAgent\\MazeAgent-886193.onnx",
+                "reward": -28.794067978858948,
+                "creation_time": 1776800492.8695302,
+                "auxillary_file_paths": [
+                    "results\\stage_2\\MazeAgent\\MazeAgent-886193.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 886193,
+            "file_path": "results\\stage_2\\MazeAgent.onnx",
+            "reward": -28.794067978858948,
+            "creation_time": 1776800492.8695302,
+            "auxillary_file_paths": [
+                "results\\stage_2\\MazeAgent\\MazeAgent-886193.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.8.0+cpu"
+    }
+}

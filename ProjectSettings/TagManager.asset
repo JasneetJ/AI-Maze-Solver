@@ -8,6 +8,8 @@ TagManager:
   - Wall
   - Agent
   - Background
+  - Sticky
+  - Slippery
   layers:
   - Default
   - TransparentFX

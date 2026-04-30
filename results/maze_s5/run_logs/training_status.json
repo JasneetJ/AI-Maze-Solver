@@ -1,0 +1,56 @@
+{
+    "MazeAgent": {
+        "checkpoints": [
+            {
+                "steps": 395,
+                "file_path": "results\\maze_s5\\MazeAgent\\MazeAgent-395.onnx",
+                "reward": -5.217249810695648,
+                "creation_time": 1775763611.3306735,
+                "auxillary_file_paths": [
+                    "results\\maze_s5\\MazeAgent\\MazeAgent-395.pt"
+                ]
+            },
+            {
+                "steps": 770,
+                "file_path": "results\\maze_s5\\MazeAgent\\MazeAgent-770.onnx",
+                "reward": -4.94225013256073,
+                "creation_time": 1775763990.9326909,
+                "auxillary_file_paths": [
+                    "results\\maze_s5\\MazeAgent\\MazeAgent-770.pt"
+                ]
+            },
+            {
+                "steps": 8481,
+                "file_path": "results\\maze_s5\\MazeAgent\\MazeAgent-8481.onnx",
+                "reward": -4.246292634708126,
+                "creation_time": 1775764389.6210494,
+                "auxillary_file_paths": [
+                    "results\\maze_s5\\MazeAgent\\MazeAgent-8481.pt"
+                ]
+            },
+            {
+                "steps": 52611,
+                "file_path": "results\\maze_s5\\MazeAgent\\MazeAgent-52611.onnx",
+                "reward": -49.357604312896726,
+                "creation_time": 1776114386.2669432,
+                "auxillary_file_paths": [
+                    "results\\maze_s5\\MazeAgent\\MazeAgent-52611.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 52611,
+            "file_path": "results\\maze_s5\\MazeAgent.onnx",
+            "reward": -49.357604312896726,
+            "creation_time": 1776114386.2669432,
+            "auxillary_file_paths": [
+                "results\\maze_s5\\MazeAgent\\MazeAgent-52611.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.8.0+cpu"
+    }
+}

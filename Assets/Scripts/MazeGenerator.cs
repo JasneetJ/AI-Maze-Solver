@@ -5,7 +5,7 @@ using System.Linq;
 public class MazeGenerator : MonoBehaviour
 {
     [Header("Maze Components")]
-    [SerializeField] GameObject wallPrefab;
+    [SerializeField] public GameObject wallPrefab;
     [SerializeField] GameObject switchPrefab;
 
     [Header("Maze Settings")]
@@ -15,7 +15,7 @@ public class MazeGenerator : MonoBehaviour
 
     float wallThickness;
 
-    Cell[,] grid; // Basically makes it have 2 indexes (e.g. array[1, 2] = "Hello";) so we can identify each cell with the row and column
+    Cell[,] grid; // Makes it have 2 indexes (e.g. array[1, 2] = "Hello";) so we can identify each cell with the row and column
     GameObject wallContainer;
     Transform agentTransform;
     Transform goalTransform;
