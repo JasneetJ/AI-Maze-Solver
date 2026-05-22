@@ -1,0 +1,107 @@
+{
+    "maze_size": {
+        "lesson_num": 4
+    },
+    "is_empty_room": {
+        "lesson_num": 4
+    },
+    "MazeAgent": {
+        "checkpoints": [
+            {
+                "steps": 99941,
+                "file_path": "results\\MazeSolver\\MazeAgent\\MazeAgent-99941.onnx",
+                "reward": -1.3116667005750868,
+                "creation_time": 1777926368.461032,
+                "auxillary_file_paths": [
+                    "results\\MazeSolver\\MazeAgent\\MazeAgent-99941.pt"
+                ]
+            },
+            {
+                "steps": 199892,
+                "file_path": "results\\MazeSolver\\MazeAgent\\MazeAgent-199892.onnx",
+                "reward": null,
+                "creation_time": 1777926907.3419304,
+                "auxillary_file_paths": [
+                    "results\\MazeSolver\\MazeAgent\\MazeAgent-199892.pt"
+                ]
+            },
+            {
+                "steps": 299935,
+                "file_path": "results\\MazeSolver\\MazeAgent\\MazeAgent-299935.onnx",
+                "reward": -2.9962501525878906,
+                "creation_time": 1777927338.0452845,
+                "auxillary_file_paths": [
+                    "results\\MazeSolver\\MazeAgent\\MazeAgent-299935.pt"
+                ]
+            },
+            {
+                "steps": 399992,
+                "file_path": "results\\MazeSolver\\MazeAgent\\MazeAgent-399992.onnx",
+                "reward": -12.340000033378601,
+                "creation_time": 1777927781.8393946,
+                "auxillary_file_paths": [
+                    "results\\MazeSolver\\MazeAgent\\MazeAgent-399992.pt"
+                ]
+            },
+            {
+                "steps": 499884,
+                "file_path": "results\\MazeSolver\\MazeAgent\\MazeAgent-499884.onnx",
+                "reward": -12.53000032901764,
+                "creation_time": 1777928236.4356008,
+                "auxillary_file_paths": [
+                    "results\\MazeSolver\\MazeAgent\\MazeAgent-499884.pt"
+                ]
+            },
+            {
+                "steps": 599771,
+                "file_path": "results\\MazeSolver\\MazeAgent\\MazeAgent-599771.onnx",
+                "reward": -12.30999986330668,
+                "creation_time": 1777928662.7241902,
+                "auxillary_file_paths": [
+                    "results\\MazeSolver\\MazeAgent\\MazeAgent-599771.pt"
+                ]
+            },
+            {
+                "steps": 699744,
+                "file_path": "results\\MazeSolver\\MazeAgent\\MazeAgent-699744.onnx",
+                "reward": -12.679999947547913,
+                "creation_time": 1777929180.047835,
+                "auxillary_file_paths": [
+                    "results\\MazeSolver\\MazeAgent\\MazeAgent-699744.pt"
+                ]
+            },
+            {
+                "steps": 799838,
+                "file_path": "results\\MazeSolver\\MazeAgent\\MazeAgent-799838.onnx",
+                "reward": -12.560000002384186,
+                "creation_time": 1777929708.9495437,
+                "auxillary_file_paths": [
+                    "results\\MazeSolver\\MazeAgent\\MazeAgent-799838.pt"
+                ]
+            },
+            {
+                "steps": 888548,
+                "file_path": "results\\MazeSolver\\MazeAgent\\MazeAgent-888548.onnx",
+                "reward": -6.919999837875366,
+                "creation_time": 1777930245.3494585,
+                "auxillary_file_paths": [
+                    "results\\MazeSolver\\MazeAgent\\MazeAgent-888548.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 888548,
+            "file_path": "results\\MazeSolver\\MazeAgent.onnx",
+            "reward": -6.919999837875366,
+            "creation_time": 1777930245.3494585,
+            "auxillary_file_paths": [
+                "results\\MazeSolver\\MazeAgent\\MazeAgent-888548.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.1.0",
+        "torch_version": "2.8.0+cpu"
+    }
+}

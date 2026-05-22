@@ -2,10 +2,10 @@ behaviors:
   MazeAgent:
     trainer_type: ppo
     hyperparameters:
-      batch_size: 256
-      buffer_size: 4096
-      learning_rate: 3.0e-4
-      beta: 0.015
+      batch_size: 1024
+      buffer_size: 10240
+      learning_rate: 1.0e-4
+      beta: 0.01
       epsilon: 0.2
       lambd: 0.95
       num_epoch: 4
@@ -13,7 +13,7 @@ behaviors:
     network_settings:
       normalize: true
       hidden_units: 256
-      num_layers: 3
+      num_layers: 2
     reward_signals:
       extrinsic:
         gamma: 0.99
@@ -22,9 +22,150 @@ behaviors:
         gamma: 0.99
         strength: 0.03
         encoding_size: 64
-        learning_rate: 3.0e-4
-    max_steps: 2000000
+        learning_rate: 1.0e-4
+    max_steps: 50000000
     time_horizon: 256
     summary_freq: 5000
     keep_checkpoints: 10
     checkpoint_interval: 100000
+
+environment_parameters:
+  maze_size:
+    curriculum:
+      - name: Lesson0_EmptyRoom
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.8}
+        value: 3.0
+      - name: Lesson1_Maze3x3_Pool
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.8}
+        value: 3.0
+      - name: Lesson2_Maze3x3_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.7}
+        value: 3.0
+      - name: Lesson3_Maze4x4_Pool
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.75}
+        value: 4.0
+      - name: Lesson4_Maze4x4_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.7}
+        value: 4.0
+      - name: Lesson5_Maze5x5_Pool
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.75}
+        value: 5.0
+      - name: Lesson6_Maze5x5_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.65}
+        value: 5.0
+      - name: Lesson7_Maze7x7_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.6}
+        value: 7.0
+      - name: Lesson8_Maze10x10_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.5}
+        value: 10.0
+      - name: Lesson9_Maze12x12_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.4}
+        value: 12.0
+      - name: Lesson10_Maze15x15_Random
+        value: 15.0
+
+  maze_pool_size:
+    curriculum:
+      - name: Lesson0_EmptyRoom
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.8}
+        value: 0.0
+      - name: Lesson1_Maze3x3_Pool
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.8}
+        value: 5.0
+      - name: Lesson2_Maze3x3_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.7}
+        value: 0.0
+      - name: Lesson3_Maze4x4_Pool
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.75}
+        value: 5.0
+      - name: Lesson4_Maze4x4_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.7}
+        value: 0.0
+      - name: Lesson5_Maze5x5_Pool
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.75}
+        value: 10.0
+      - name: Lesson6_Maze5x5_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.65}
+        value: 0.0
+      - name: Lesson7_Maze7x7_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.6}
+        value: 0.0
+      - name: Lesson8_Maze10x10_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.5}
+        value: 0.0
+      - name: Lesson9_Maze12x12_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.4}
+        value: 0.0
+      - name: Lesson10_Maze15x15_Random
+        value: 0.0
+
+  is_empty_room:
+    curriculum:
+      - name: Lesson0_EmptyRoom
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.8}
+        value: 1.0
+      - name: Lesson1_Maze3x3_Pool
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.8}
+        value: 0.0
+      - name: Lesson2_Maze3x3_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.7}
+        value: 0.0
+      - name: Lesson3_Maze4x4_Pool
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.75}
+        value: 0.0
+      - name: Lesson4_Maze4x4_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.7}
+        value: 0.0
+      - name: Lesson5_Maze5x5_Pool
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.75}
+        value: 0.0
+      - name: Lesson6_Maze5x5_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.65}
+        value: 0.0
+      - name: Lesson7_Maze7x7_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.6}
+        value: 0.0
+      - name: Lesson8_Maze10x10_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.5}
+        value: 0.0
+      - name: Lesson9_Maze12x12_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.4}
+        value: 0.0
+      - name: Lesson10_Maze15x15_Random
+        value: 0.0
+
+  trap_chance:
+    curriculum:
+      - name: Lesson0_EmptyRoom
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.8}
+        value: 0.0
+      - name: Lesson1_Maze3x3_Pool
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.8}
+        value: 0.0
+      - name: Lesson2_Maze3x3_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.7}
+        value: 0.0
+      - name: Lesson3_Maze4x4_Pool
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.75}
+        value: 0.0
+      - name: Lesson4_Maze4x4_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.7}
+        value: 0.01
+      - name: Lesson5_Maze5x5_Pool
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.75}
+        value: 0.01
+      - name: Lesson6_Maze5x5_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.65}
+        value: 0.02
+      - name: Lesson7_Maze7x7_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.6}
+        value: 0.05
+      - name: Lesson8_Maze10x10_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.5}
+        value: 0.08
+      - name: Lesson9_Maze12x12_Random
+        completion_criteria: {measure: reward, behavior: MazeAgent, signal_smoothing: true, min_lesson_length: 100, threshold: 0.4}
+        value: 0.10
+      - name: Lesson10_Maze15x15_Random
+        value: 0.12
